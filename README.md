@@ -1,4 +1,5 @@
 # Лабораторная работа №2
+[![Build Status](https://travis-ci.org/nastya-asya/lab-02-cache.svg?branch=lab)](https://travis-ci.org/nastya-asya/lab-02-cache)
 
 В большинстве современных ПК используется следующая иерархия памяти:
 | Тип | Скорость доступа | Размер |
@@ -155,6 +156,180 @@ investigation:                                       |  investigation:
 ...                                                  |  ...
 ```
 
-### Рекомендации
+⚠️ В отчет также необходимо добавить общий график с результатами всех исследований. ⚠️
 
-При создание неиспользуемых переменных для считывание данных из буфера можно использовать аттрибут `[[maybe_unused]]`
+
+```cpp
+investigation:
+  travel_order: direction
+  - experiment:
+    number: 1
+    input_data:
+      buffer_size: 32 Kb
+    results:
+      duration: 3.289ms
+  - experiment:
+    number: 2
+    input_data:
+      buffer_size: 64 Kb
+    results:
+      duration: 6.486ms
+  - experiment:
+    number: 3
+    input_data:
+      buffer_size: 128 Kb
+    results:
+      duration: 12.473ms
+  - experiment:
+    number: 4
+    input_data:
+      buffer_size: 256 Kb
+    results:
+      duration: 24.668ms
+  - experiment:
+    number: 5
+    input_data:
+      buffer_size: 512 Kb
+    results:
+      duration: 48.501ms
+  - experiment:
+    number: 6
+    input_data:
+      buffer_size: 1024 Kb
+    results:
+      duration: 100.846ms
+  - experiment:
+    number: 7
+    input_data:
+      buffer_size: 2048 Kb
+    results:
+      duration: 198.749ms
+  - experiment:
+    number: 8
+    input_data:
+      buffer_size: 4096 Kb
+    results:
+      duration: 345.025ms
+  - experiment:
+    number: 9
+    input_data:
+      buffer_size: 8192 Kb
+    results:
+      duration: 661.647ms
+
+investigation:
+  travel_order: reverse
+  - experiment:
+    number: 1
+    input_data:
+      buffer_size: 32 Kb
+    results:
+      duration: 1.079ms
+  - experiment:
+    number: 2
+    input_data:
+      buffer_size: 64 Kb
+    results:
+      duration: 2.551ms
+  - experiment:
+    number: 3
+    input_data:
+      buffer_size: 128 Kb
+    results:
+      duration: 5.13ms
+  - experiment:
+    number: 4
+    input_data:
+      buffer_size: 256 Kb
+    results:
+      duration: 9.65ms
+  - experiment:
+    number: 5
+    input_data:
+      buffer_size: 512 Kb
+    results:
+      duration: 19.935ms
+  - experiment:
+    number: 6
+    input_data:
+      buffer_size: 1024 Kb
+    results:
+      duration: 42.189ms
+  - experiment:
+    number: 7
+    input_data:
+      buffer_size: 2048 Kb
+    results:
+      duration: 76.925ms
+  - experiment:
+    number: 8
+    input_data:
+      buffer_size: 4096 Kb
+    results:
+      duration: 146.451ms
+  - experiment:
+    number: 9
+    input_data:
+      buffer_size: 8192 Kb
+    results:
+      duration: 293.141ms
+
+investigation:
+  travel_order: random
+  - experiment:
+    number: 1
+    input_data:
+      buffer_size: 32 Kb
+    results:
+      duration: 4.901ms
+  - experiment:
+    number: 2
+    input_data:
+      buffer_size: 64 Kb
+    results:
+      duration: 10.012ms
+  - experiment:
+    number: 3
+    input_data:
+      buffer_size: 128 Kb
+    results:
+      duration: 18.665ms
+  - experiment:
+    number: 4
+    input_data:
+      buffer_size: 256 Kb
+    results:
+      duration: 36.703ms
+  - experiment:
+    number: 5
+    input_data:
+      buffer_size: 512 Kb
+    results:
+      duration: 76.374ms
+  - experiment:
+    number: 6
+    input_data:
+      buffer_size: 1024 Kb
+    results:
+      duration: 161.322ms
+  - experiment:
+    number: 7
+    input_data:
+      buffer_size: 2048 Kb
+    results:
+      duration: 336.081ms
+  - experiment:
+    number: 8
+    input_data:
+      buffer_size: 4096 Kb
+    results:
+      duration: 670.46ms
+  - experiment:
+    number: 9
+    input_data:
+      buffer_size: 8192 Kb
+    results:
+      duration: 1302.65ms
+```
+
+![Results](1.jpg)
